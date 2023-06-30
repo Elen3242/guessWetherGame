@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightblue;
+    main {
+        display: grid;
+        place-items: center;
+        margin-top: 100px;
+        .container_block {
+            button {
+                margin-top: 20px;
+                width: 100%;
+                padding: 10px;
+                cursor: pointer;
+                border: none;
+                border-radius: 10px;
+                &:hover {
+                    transition: 3s;
+                    background-color: rgb(24, 63, 136);
+                }
+            
+            }
+         border: 2px solid black;
+         padding: 40px;
+         border-radius: 20px;
+         .main_section {
+            padding: 40px;
+            .correct {
+                background-color: green;
+                color: white;
+                margin-bottom: 10px;  
+                border-radius: 5px ;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            }
+            .incorrect {
+                background-color: red;
+                color: white;
+                margin-bottom: 10px;
+                border-radius: 5px ;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+            }
+        }
+         .second_section {
+            text-align: center;
+            padding-top: 20px;
+            p {
+                font-size: 20px;
+            }
+            input {
+                margin-top: 20px;
+                padding: 8px 16px;
+                border: none;
+                border-radius: 10px;
+                cursor: context-menu;
+            }
+         }
+       } 
+    }
+
+    hr {
+        width: 80%;
+        margin-top: 40px;
+        color: black;
+    }
+}
+
+
+
