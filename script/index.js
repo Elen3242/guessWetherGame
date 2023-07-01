@@ -61,10 +61,6 @@ function handleGuess() {
     });
 }
 
-// Add event listener to the "Check" button
-const checkButton = document.querySelector('button');
-checkButton.addEventListener('click', handleGuess);
-
 
 // Function to set the city name in the HTML
 function setCityName(city) {
@@ -83,26 +79,30 @@ function updateCityName(isCorrect) {
   }
   
 
+// Function to handle the guess
 function handleGuess() {
-    const input = document.querySelector('.second_section input');
-    const guess = parseInt(input.value);
-    input.value = '';
-  
-    const city = cities[Math.floor(Math.random() * cities.length)];
-  
-    fetchTemperature(city)
-      .then(temperature => {
-        const isCorrect = checkGuess(guess, temperature);
-        updateDisplay(city, guess, temperature, isCorrect);
-        updateCityName(isCorrect);
-        setTimeout(() => {
-          const nextCity = cities[Math.floor(Math.random() * cities.length)];
-          setCityName(nextCity);
-        }, 2000); // Delay for 2 seconds before displaying the next city name
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }
-  
-  
+  const input = document.querySelector('.second_section input');
+  const guess = parseInt(input.value);
+  input.value = '';
+
+  const cityNameElement = document.querySelector('.second_section p');
+  const city = cityNameElement.textContent;
+
+  fetchTemperature(city)
+    .then(temperature => {
+      const isCorrect = checkGuess(guess, temperature);
+      updateDisplay(city, guess, temperature, isCorrect);
+      updateCityName(isCorrect);
+      setTimeout(() => {
+        const nextCity = cities[Math.floor(Math.random() * cities.length)];
+        setCityName(nextCity);
+      }, 1000); // Delay for 2 seconds before displaying the next city name
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+// Add event listener to the "Check" button
+const checkButton = document.querySelector('button');
+checkButton.addEventListener('click', handleGuess);
