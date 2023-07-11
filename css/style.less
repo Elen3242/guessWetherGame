@@ -4,12 +4,16 @@
 }
 
 body {
-    background-color: lightblue;
+    background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/07/Download-Free-Weather-Background-768x432.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     main {
         display: grid;
         place-items: center;
         margin-top: 100px;
         .container_block {
+            background-color: rgba(0, 0, 0, 0.218);
+            box-shadow: rgba(0, 0, 0, 0.863) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             button {
                 margin-top: 20px;
                 width: 100%;
@@ -29,6 +33,7 @@ body {
         .main_section {
             padding: 40px;
             .correct {
+                margin-top: 20px;
                 background-color: green;
                 color: white;
                 margin-bottom: 10px;  
@@ -36,6 +41,7 @@ body {
                 box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
             }
             .incorrect {
+                margin-top: 20px;
                 background-color: red;
                 color: white;
                 margin-bottom: 10px;
@@ -58,7 +64,7 @@ body {
                 cursor: context-menu;
             }
         }
-    } 
+      } 
     }
 
     hr {
